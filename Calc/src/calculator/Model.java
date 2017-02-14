@@ -7,6 +7,8 @@ public class Model {
 			case "+":
 				return number1 + number2;
 			case "-":
+				if(number1 == 0)
+					return number2;
 				return number1 - number2;
 			case "*":
 				return number1 * number2;
