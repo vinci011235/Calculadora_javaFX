@@ -16,7 +16,6 @@ public class Model {
 			return number1 / number2;
 		
 		}
-		
 		System.out.println("Unkown operator" + operator);
 		return 0;
 	}

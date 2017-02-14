@@ -44,6 +44,8 @@ public class Controller {
 			if(operator.isEmpty())
 				return;
 			
+			
+			//Rework print, show equation
 			output.setText(String.valueOf(model.calculate(number1, Long.parseLong(output.getText()), operator)));
 			operator = "";
 			start = true;
