@@ -52,7 +52,7 @@ public class Controller {
 			
 
 			number2 = Double.parseDouble(output.getText());
-			output_res.setText("="+String.valueOf(model.calculate(number1, number2, operator)));
+			output_res.setText("= "+String.valueOf(model.calculate(number1, number2, operator)));
 			output.setText(number1 + " " + operator + " " + number2);
 			operator = "";
 			start = true;
