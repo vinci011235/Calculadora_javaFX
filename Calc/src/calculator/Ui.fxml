@@ -18,8 +18,12 @@
     </fx:define>
     
     <StackPane alignment="CENTER">
-        <Rectangle fill="TRANSPARENT" stroke="GRAY" width="230" height="50" />
+        <Rectangle fill="TRANSPARENT" stroke="GRAY" width="230" height="25" />
         <Text fx:id="output" font="$FONT" />
+    </StackPane>
+        <StackPane alignment="CENTER">
+        <Rectangle fill="TRANSPARENT" stroke="GRAY" width="230" height="25" />
+        <Text fx:id="output_res" font="$FONT" />
     </StackPane>
 
     <HBox spacing="10" alignment="CENTER">

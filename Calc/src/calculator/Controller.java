@@ -10,7 +10,12 @@ public class Controller {
 	@FXML
 	private Text output;
 	
-	private long number1 = 0;
+	@FXML
+	private Text output_res;
+	
+	private double number1 = 0.0;
+	private double number2 = 0.0;
+	
 	private String operator = "";
 	private boolean start = true;
 	
@@ -21,11 +26,12 @@ public class Controller {
 		
 		if(start){
 			output.setText("");
+			output_res.setText("");
 			start = false;
 		}
 		
 		String value = ((Button)event.getSource()).getText();
-		output.setText(output.getText() + value);
+		output.setText((output.getText() + value));
 	}
 	
 	@FXML
@@ -36,17 +42,18 @@ public class Controller {
 			if(!operator.isEmpty())
 				return;
 			
+			number1 = Double.parseDouble(output.getText());
 			operator = value;
-			number1 = Long.parseLong(output.getText());
 			output.setText("");
 		}else{
 			
 			if(operator.isEmpty())
 				return;
 			
-			
-			//Rework print, show equation
-			output.setText(String.valueOf(model.calculate(number1, Long.parseLong(output.getText()), operator)));
+
+			number2 = Double.parseDouble(output.getText());
+			output_res.setText("="+String.valueOf(model.calculate(number1, number2, operator)));
+			output.setText(number1 + " " + operator + " " + number2);
 			operator = "";
 			start = true;
 		}
