@@ -70,13 +70,13 @@ public class Controller {
 			output_res.setText("= " + String.valueOf(model.calculate(number1, number2, operator)));
 			output.setText(number1 + " " + operator + " " + number2);
 			operator = "";
-			start = true;
 			start();
 		}
 	}
 	
 	//loop
 	private void start(){
+		start = true;
 		more = true;
 		a = 0;
 	}
