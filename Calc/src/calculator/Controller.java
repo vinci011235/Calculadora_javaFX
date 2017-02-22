@@ -51,12 +51,6 @@ public class Controller {
 			if(!operator.isEmpty())
 				return;
 			
-			//refactory
-			if(value.equals("DEL")){	
-				value = value.substring(0, value.length()-1);
-			}
-			
-			
 			number1 = Double.parseDouble(output.getText());
 			operator = value;
 			output.setText("");
